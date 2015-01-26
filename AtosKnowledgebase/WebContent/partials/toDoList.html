@@ -1,0 +1,66 @@
+<div ng-controller="ToDoListXMLCtrl">
+<div ng-init="onload()">
+<table id="filterBox" class="table_type_01">
+	<tr>
+		<td><label>Filters:</label>
+			<select ng-model="selectedItem" ng-change="sprintSelector(this)">
+				<option value="all">All</option> <!-- All functie uitwerken! -->
+				<option value="1">Sprint 1</option>
+				<option value="2_">Sprint 2</option>
+				<option value="3" selected>Sprint 3</option>
+			</select>
+		</td>
+		<td><input type="checkbox" ng-click="toggleDone()" id="toggleDoneButton" /><label>Afgeronde taken</label></td>
+		<td>
+			<select ng-model="searchBy">
+				<option value="status">status</option>
+				<option value="id">id</option>
+				<option value="omschrijving">omschrijving</option>
+			</select>
+			<input ng-model="searchText[searchBy]" placeholder="Search">
+		</td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<button class="toggleAdvSearchBtn" ng-click="toggleAdvSearch()">Advanced search</button>
+		</td>
+	</tr>
+</table>
+
+<table id="advSearchBox" ng-show="ngHide" class="table_type_01">
+	<tr>
+		<td><label>status:</label>
+		<input ng-model="searchByStatus" type="text" /></td>
+	</tr>
+	<tr>
+		<td><label>id:</label>
+		<input  ng-model="searchById" type="text" /></td>
+	</tr>
+	<tr>	
+		<td><label>omschrijving:</label>
+		<input  ng-model="searchByDescr" type="text" /></td>
+	</tr>
+</table>
+	
+<table id="toDoListTable" class="table_type_03" ng-init="loadSprint('2_')">
+	<tr>
+		<th id="status" ng-click="orderByField='status';reverseSort = !reverseSort">
+			Status<span ng-show="orderByField == 'status'"><span ng-show="!reverseSort">&#x25BC;</span><span ng-show="reverseSort">&#x25B2;</span></span>
+		</th>
+		<th id="userstory" ng-click="orderByField='userstory';reverseSort = !reverseSort">
+			Userstory<span ng-show="orderByField == 'userstory'"><span ng-show="!reverseSort">&#x25BC;</span><span ng-show="reverseSort">&#x25B2;</span></span>
+		</th>
+		<th id="omschrijving">
+			Omschrijving
+		</th>
+	</tr>
+	<tr ng-repeat="userstory in dataSet | orderBy:orderByField:reverseSort | filter:searchText | filter:{status:searchByStatus, id:searchById, omschrijving:searchByDescr}" id="{{userstory.status}}" class="{{userstory.status}}">
+		<td>{{userstory.status}}</td>
+		<td>{{sprintNumber}}.{{userstory.id}}</td>
+		<td>{{userstory.omschrijving}}</td>
+	</tr>
+</table>
+<div ng-include="partials/toDoListEditForm.html"></div>
+<!-- ng-include weigerd te laden -->
+</div>
+</div>

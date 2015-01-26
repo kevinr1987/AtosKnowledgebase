@@ -1,0 +1,8 @@
+rest\UserRegister.class
+rest\ApplicationConfig.class
+controller\RegisterUser.class
+database\User.class
+test\Test.class
+model\Bean.class
+controller\Database.class
+controller\DisplayUser.class

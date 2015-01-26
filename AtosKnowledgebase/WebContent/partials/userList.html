@@ -1,0 +1,37 @@
+<table id="advSearchBox" >
+	<tr>
+		<td><label>id:</label><input ng-model="searchById" type="text" /></td>
+		<td><label>Firstname:</label><input ng-model="searchByFn" type="text" /></td>
+		<td><label>Middlename:</label><input ng-model="searchByMn" type="text" /></td>
+		<td><label>Surname:</label><input ng-model="searchBySn" type="text" /></td>
+	</tr>
+	<tr>
+		<td><label>Date of Birth:</label><input  ng-model="searchByDoB" type="text" /></td>
+		<td><label>Function:</label><input  ng-model="searchByFunction" type="text" /></td>
+		<td><label>Competence:</label><input  ng-model="searchByCom" type="text" /></td>
+	</tr>
+</table>
+<table class="table_type_02">
+	<tr>
+		<td>ID</td>
+		<td>Firstname</td>
+		<td>Middlename</td>
+		<td>Surname</td>
+		<td>Date of birth</td>
+		<td>Function</td>
+		<td>Competence</td>
+	</tr>
+	<tr ng-repeat="user in users | filter:{id:searchById,firstName:searchByFn,middleName:searchByMn,surName:searchBySn,geboorteDatum:searchByDoB,function:searchByFunction}">
+		<td>{{ user.id }}</td>
+		<td>{{ user.firstName }}</td>
+		<td>{{ user.middleName }}</td>
+		<td>{{ user.surName }}</td>
+		<td>{{ user.geboorteDatum }}</td>
+		<td>{{ user.function }}</td>
+		<td>
+			<ul>
+				<li ng-repeat="comp in user.competenties | filter:{comp:searchByCom}">{{comp}}</li>
+			</ul> 
+		</td>
+	</tr>
+</table>

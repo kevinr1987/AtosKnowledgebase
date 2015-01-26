@@ -1,0 +1,51 @@
+	 			<form class="form-horizontal" role="form" action="rest/add/addUser" method="post">
+					<table id="registerField" class="table_type_01">
+						<tr>
+							<td><label>A/NL number *</label></td>
+							<td><input type="text" name="id" placeholder="A123456 / NL12345" required pattern="^[aA]{1}[0-9]{6}$|^[nlNL]{2}[0-9]{5}$" autofocus oninvalid="setCustomValidity('* required \nPlease enter your A or NL number in this format A123456 / NL12345 ')"  onchange="try{setCustomValidity('')}catch(e){}" /></td>
+						</tr>
+						<tr>
+							<td><label>Firstname *</label></td>
+							<td><input type="text" name="fn" required pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$" oninvalid="setCustomValidity('* required \nPlease enter your firstname ')"  onchange="try{setCustomValidity('')}catch(e){}"/></td>
+						</tr>
+						<tr>
+							<td><label>Middlename</label></td>
+							<td><input type="text" name="mn" pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$" /></td>
+						</tr>
+						<tr>
+							<td><label>Surname *</label></td> 
+							<td><input type="text" name="ln" required pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$" oninvalid="setCustomValidity('* required \nPlease enter your surname ')"  onchange="try{setCustomValidity('')}catch(e){}"/></td>
+						</tr>
+						<tr>
+							<td><label>Date of Birth</label></td>
+							<td><input type="text" name="dob" placeholder="dd-mm-jjjj"  pattern="^[0-9]{2}[-][0-9]{2}[-][0-9]{4}$"/></td>
+						</tr>
+						<tr>
+							<td><label>Function</label></td>
+							<td><input type="text" name="func"  pattern="^[a-zA-Z][a-zA-Z-_\. ]{1,30}$"/></td>
+						</tr>
+						<tr>
+							<td><label>Competences</label></td>
+							<td>
+						    	<select name="comp" data-placeholder="Choose a competence" class="chosen-select" multiple style="width:304px;" 
+						     tabindex="4">
+						    	    
+						            <option value="Java">Java</option>
+						            <option value=".Net">.Net</option>
+						            <option value="Management">Management</option>
+						      		<option value="Project Management">Project Management</option>
+					    		</select>							
+					    	</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<button type="submit" id="saveButton" class="btn btn-success">Save</button>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="information">
+								* required fields
+							</td>
+						</tr>
+					</table>
+				</form>

@@ -1,0 +1,30 @@
+#main{
+	height:175px;
+	width:360px;
+	margin:50px auto;
+	background-color:#F7F7F7;
+	border-width:2px;
+	border-color:#E2E2E2;
+	border-style: solid;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius:4px;
+}
+
+#registerField{
+	margin:10px;
+}
+
+#registerField td{
+	height:35px;
+	width:110px;
+}
+
+#registerField #saveButton{
+	float:right;
+}
+
+#registerField input[type=text]{
+	width: 200px;
+}
+

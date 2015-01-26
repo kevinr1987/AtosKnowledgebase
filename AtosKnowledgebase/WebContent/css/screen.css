@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* Atos Web 2010: Stylesheet for sreens */
+/*
+=================================================================================================
+	Versie			:	screen.css
+	Date			:	2010 Oct 21
+	Description		:	initial version, this CSS hides elements for screen usage
+	Author			:	Paul van Buuren (nl1145), paul.vanbuuren@atosorigin.com
+=================================================================================================
+*/
+
+a#top, .hidden, .screen-reader-text {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+#content form legend, #package-popup form legend {	
+	display:none;
+	visibility:hidden;
+}	
+

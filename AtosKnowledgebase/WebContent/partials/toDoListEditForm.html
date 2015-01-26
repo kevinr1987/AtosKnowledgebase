@@ -1,0 +1,20 @@
+<div ng-controller="ToDoListXMLCtrl">
+	<form id="toDoListEditForm">
+		<table id="toDoListEditTable" class="table_type_03">
+			<tr>
+				<td><label>Status:</label></td>
+				<td><input type="text" id="status" value="{{userstory.status}}" /></td>
+			</tr>
+			<tr>
+				<td><label>Userstory:</label></td>
+				<td><input type="text" id="sprintId" value="{{sprintNumber}}.{{userstory.id}}" readonly="readonly"/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><label>Omschrijving:</label></td>
+			</tr>
+			<tr>
+				<td colspan="2"><textarea id="omschrijving">{{userstory.omschrijving}}</textarea></td>
+			</tr>
+		</table>
+	</form>
+</div>

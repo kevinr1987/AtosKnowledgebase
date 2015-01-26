@@ -1,0 +1,67 @@
+<sprint id="2">
+	<userstory>
+		<id>1</id>
+		<status>Opgepakt</status>
+		<omschrijving>
+			De rest resource(s)  moeten worden gebouwd m.b.v. jaxb
+			de restresource moet via een service de DAO (Data Acces Objects) laag aanspreken. (In de dao gebruik je Morphia richting Mongodb) en niet rechtstreeks. Tevens moet dit via CDI (Context Dependency Injection) gebeuren dus @Inject.... Waarbij elke service een interface en een implementatie heeft.
+			Ook de Service gebruikt CDI om de DAO te injecten en ook de DAO heeft een interface en een implementatie.
+			Voor elke service methode en DAO methode moet een JUnittest worden geschreven.
+
+			Het injecteren gebeurd altijd via de interface! 
+
+			Zie https://docs.oracle.com/javaee/7/tutorial/index.html
+
+			Ik weet niet hoeverre jullie je hier reeds aan hebben gehouden anders moet het gerefactord worden.
+			Je mag hier zelf de taken voor opstellen en plannen m.b.v. plannings-poker.			
+		</omschrijving>
+	</userstory>
+	<userstory>
+		<id>2</id>
+		<status>Klaar</status>
+		<omschrijving>
+			De ingevoerde gebruiker moet worden uitgebreid met:
+				
+			Atos A of NL nummer (is uniek)
+			geboortedatum
+			functie
+			competenties (dit moet een lijst zijn met 0 of meerdere competenties)
+			
+			Op het eerdere scherm van sprint 1 komen dus 2 tekst-velden bij een en een mogelijkheid om competenties toe te voegen. Tevens moeten de al ingevoerde competenties te zien zijn en een mogelijkheid om deze te editen. Bij opslaan wordt dus het hele object opgeslagen.	
+		</omschrijving>
+	</userstory>
+	<userstory>
+		<id>3</id>
+		<status>Klaar</status>
+		<omschrijving>
+			In het huidige scherm waar ik kan zien wat reeds in Mongo zit moeten De hierboven nieuwe velden bijkomen. 
+
+			Het weergeven graag in tabelvorm, met het NL/A nummer als eerst.
+		</omschrijving>
+	</userstory>
+	<userstory>
+		<id>4</id>
+		<status>Oppakken</status>
+		<omschrijving>
+			In het huidige scherm waar ik kan zien wat al in Mongo zit moet ik een link hebben naar een edit pagina. Hier kan ik alles van de gekozen gebruiker wijzigen behalve het A/NL nummer.
+
+			Of je de link met een hyperlink knop maakt laat ik aan jullie over.
+		</omschrijving>
+	</userstory>
+	<userstory>
+		<id>5</id>
+		<status>Oppakken</status>
+		<omschrijving>
+			In het huidige scherm waar ik kan zien wat reeds in Mongo zit moet ik een link/knop o.i.d. hebben om de gebruiker te verwijderen voordat hij verwijderd wordt wel graag een melding of ik het zeker weet ja/nee.
+		</omschrijving>
+	</userstory>
+	<userstory>
+		<id>6</id>
+		<status>Klaar</status>
+		<omschrijving>
+			Ik wil een zoekscherm waar ik kan zoeken op een competentie.
+			Het resultaat wordt een lijst met users die die competentie hebben.
+			Dit moet case insensitive werken!
+		</omschrijving>
+	</userstory>
+</sprint>

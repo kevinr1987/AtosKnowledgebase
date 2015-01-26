@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+
+<f:loadBundle basename="webapp.application" var="msg"/>
+
+<head>
+    <title>Knowledgebase</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css\stylesheet.css" type="text/css" />
+    
+    <!-- Load angularjs -->
+    <script src="jscript\angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+	
+    <!-- Load javascript -->
+    <script src="jscript\javascript.js"></script>
+   <!--   <script src="jscript\services.js"></script> -->
+</head>
+
+<body  ng-app="MyApp">
+	<section id="main">
+		<section id="content">	
+<!-- 		
+			<form action="..\src\rest\UserRegister.java" method="get">
+ -->
+ 			<form class="form-horizontal" role="form" ng-controller="MyCtrl1" action="rest/add/addUser" method="post">
+				<table id="registerField">
+					<tr>
+						<td><label>Firstname</label></td>
+						<td><input type="text" name="fn" ng-model="formInfo.firstName" pattern="^[a-zA-Z][a-zA-Z-_\.]{1,30}$"/></td>
+						<span ng-show="firstnameRequired">{{firstnameRequired}}</span>
+					</tr>
+					<tr>
+						<td><label>Middlename</label></td>
+						<td><input type="text" name="mn" ng-model="formInfo.middleName" pattern="^[a-zA-Z][a-zA-Z-_\.]{1,30}$" /></td>
+						<span ng-show="middlenameRequired">{{middlenameRequired}}</span>
+					</tr>
+					<tr>
+						<td><label>Surname</label></td> 
+						<td><input type="text" name="ln" ng-model="formInfo.lastName" pattern="^[a-zA-Z][a-zA-Z-_\.]{1,30}$" /></td>
+						<span ng-show="lastnameRequired">{{lastnameRequired}}</span>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<button type="submit" id="saveButton" ng-click="saveData()" class="btn btn-success">Save</button>
+						</td>
+					</tr>
+				</table>
+			  </form>	
+			</section>
+		</section>
+		<footer>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,75 @@
+	<sprint id="3">
+		<userstory>
+			<id>1</id>
+			<status>Oppakken</status>
+			<omschrijving>
+				Dependency injectie moet werken
+			</omschrijving>
+		</userstory>
+		<userstory>
+			<id>2</id>
+			<status>Klaar</status>
+			<omschrijving>
+				1 main html page met partials.
+			</omschrijving>
+		</userstory>
+		<userstory>
+			<id>3</id>
+			<status>Opgepakt</status>
+			<omschrijving>
+				Inrichten git
+			</omschrijving>
+		</userstory>
+		<userstory>
+			<id>4</id>
+			<status>Oppakken</status>
+			<omschrijving>
+				Inrichten checkstyle lokaal (Normaal wordt dit door bijvoorbeeld sonar uitgevoerd)
+			</omschrijving>
+		</userstory>
+		<userstory >
+			<id>5</id>
+			<status>Oppakken</status>
+			<omschrijving>
+				Checkstyle gebruikt default rules gebruik die eerst maar kun je later in een andere sprint aanpassen
+			</omschrijving>
+		</userstory>
+		<userstory>
+			<id>6</id>
+			<status>Oppakken</status>
+			<omschrijving>
+				Maak een document/wiki met hierin de instructies hoe de een nieuwe medewerker  de omgeving snel op kan zetten en gelijk met jullie mee kan doen na bijvoorbeeld 1 of ½ dag dag.  Dus alles java instaleren eclipse instaleren git uitchecken enz. En houd dit document / wiki bij. Ook handig om dingen te beschrijven die handig zijn voor andere van je team.
+			</omschrijving>
+		</userstory>
+		<userstory>
+			<id>7</id>
+			<status>Oppakken</status>
+			<omschrijving>
+				Maak de applicatie geschikt voor het bijhouden of iemand op de bank zit of niet bedenk zelf hoe dit te doen.
+			</omschrijving>
+		</userstory>
+		<userstory>
+			<id>8</id>
+			<status>Opgepakt</status>
+			<omschrijving>
+				Implementeer atos huisstijl probeer de css files van atos sites te  gebruiken indien mogelijk
+			</omschrijving>
+		</userstory>
+		<userstory>
+			<id>9</id>
+			<status>Oppakken</status>
+			<omschrijving>
+				Doe onderzoek naar hoe je de applicatie kun beveiligen met 3 rollen.
+				De rollen zijn 	gebruiker 
+				mag invoegen en wijzigen maar niet anderen verwijderen
+					guest
+				mag alleen kijken
+					admin
+				mag alles
+
+				Implementeer deze feature nog niet in de applicatie maar bijvoorbeeld ergens lokaal nadat je de applicatie hebt gecloned (git). Beschouw het als een poc (proof of concept)
+				Bij raadplegen van de pagina moet je indien je niet bent ingelogd dus je naam en password opgeven. Gebruik voor de oplossing de mogenlijkheden die Jboss wildfly je geeft.
+				Doe deze laatste opdracht met minimaal 2 mensen!
+			</omschrijving>
+		</userstory>
+	</sprint>
