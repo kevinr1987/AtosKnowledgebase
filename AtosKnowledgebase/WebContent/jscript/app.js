@@ -123,5 +123,5 @@ app.controller('AddPageCtrl', function ( $scope, $location, $http ) {
 });
 
 app.controller('ListPageCtrl', function getUsers($scope,$http) {
-	$http.get("rest/add/getusers").success(function(response) {$scope.users = response;});
+	$http.get("rest/user").success(function(response) {$scope.users = response;});
 });
