@@ -21,22 +21,21 @@ public class User {
 
 	@Property("SurName")
 	private String surName;
-	
+
 	@Property("DateOfBirth")
 	private String geboorteDatum;
 
 	@Property("Function")
 	private String function;
-	
+
 	@Property("Compentence")
 	private List<String> competenties;
 
-	public User(){
-		
+	public User() {
+
 	}
-	
-	public User(String id, String firstName, String middleName, String surName,
-			String geboorteDatum, String function, List<String> competenties) {
+
+	public User(String id, String firstName, String middleName, String surName, String geboorteDatum, String function, List<String> competenties) {
 		this.id = id;
 		this.firstName = firstName;
 		this.middleName = middleName;
@@ -53,7 +52,7 @@ public class User {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
 	public String getFirstName() {
 		return firstName;
 	}
@@ -104,10 +103,8 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", firstName=" + firstName + ", middleName="
-				+ middleName + ", surName=" + surName + ", geboorteDatum="
-				+ geboorteDatum + ", function=" + function + ", competenties="
-				+ competenties + "]";
+		return "User [id=" + id + ", firstName=" + firstName + ", middleName=" + middleName + ", surName=" + surName + ", geboorteDatum="
+				+ geboorteDatum + ", function=" + function + ", competenties=" + competenties + "]";
 	}
 
 }
