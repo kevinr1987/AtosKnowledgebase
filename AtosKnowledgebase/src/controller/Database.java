@@ -12,7 +12,7 @@ public class Database {
 	private MongoClient mongoClient = null;
 	private DB database;
 	private DBCollection collection;
-	private String databaseName = "atosdb";
+	private String databaseName = "atos";
 	private String collectionName = "usercollection";
 
 	public Database() {
